@@ -1,0 +1,7 @@
+{
+    "test_user": {
+        "id": "test",
+        "name": "Test User",
+        "favorite_color": "Black"
+    }
+}
