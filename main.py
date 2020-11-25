@@ -2,6 +2,7 @@ import json
 import pathlib
 
 from flask import Flask
+from flask import render_template
 
 app = Flask(__name__)
 
@@ -31,7 +32,7 @@ def users_path():
     users = read_from_file(path)
     for i in users.values():
         i.pop('id')
-    return 'users'
+    return users
 
 
 @app.route('/users/<username>')

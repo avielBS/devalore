@@ -14,7 +14,7 @@ class FlaskTest(unittest.TestCase):
         data = json.loads(data)
 
         # for fail this test
-        # data['duncan_long']['id'] = 1
+        # data['test_user']['id'] = 1
 
         expected_output = {"test_user": {"name": "Test User", "favorite_color": "Black"}}
         self.assertEqual(data, expected_output)
