@@ -32,7 +32,7 @@ def users_path():
     users = read_from_file(path)
     for i in users.values():
         i.pop('id')
-    return ''
+    return users
 
 
 @app.route('/users/<username>')
