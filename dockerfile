@@ -6,5 +6,9 @@ RUN apk add --no-cache gcc musl-dev linux-headers
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 EXPOSE 5000
+
+RUN pip install flake8==$FLAKE8_VERSION
+ENTRYPOINT ["flake8"]
+
 COPY . .
 CMD ["flask", "run"]
