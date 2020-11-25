@@ -8,7 +8,7 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 
 RUN python -m pip install flake8
-RUN flake8 main.py
+RUN docker run -v $(pwd)/src:/src myimage flake8 src
 
 COPY . .
 CMD ["flask", "run"]
